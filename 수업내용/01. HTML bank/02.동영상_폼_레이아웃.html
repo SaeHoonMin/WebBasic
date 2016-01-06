@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02.동영상_폼_레이아웃</title>
+</head>
+<body>
+    <video src="a.mp4" type="video/mp4" controls="controls"></video>
+    <!--
+    <video controls="controls">
+        <source src="a.mp4" type="video/mp4"/>
+    </video>
+    -->
+    <!--
+    <FORM> 태그
+        : 입력 양식을 정의하는 태그.
+        속성                  의미
+        action              폼을 전송할 서버 쪽 스크립트 파일을 지정
+        name                폼을 식별하기 위한 이름을 지정
+        method              폼을 전송하는 방식(get(default), post)정의
+        target              action에서 지정한 스크립트 파일을 현재 창이 아닌 다른 위치에 열도록 지정
+        accept-charset      폼 전송에 사용할 문자 인코딩을 지정합니다.
+    -->
+    <!--
+    <INPUT> 태그
+        : 사용자로부터 데이터를 입력받기 위한 태그
+        속성                          의미
+        type = "text"               문자를 입력받을 때 사용
+               "password"           암호 입력받을 때 사용
+               "checkbox"           여러 개 체크 가능
+               "radio"              여러 항목 중 하나 선택
+               "submit"             폼 내용 전송시
+               "reset"              폼 입력 값 초기 값으로 바꿀 때
+               "file"               첨부파일
+               "hidden"             사용자에게 보이지않게 전달할 값 있을때
+               "image"              그래픽 submit 단추
+               "button"             button으로 입력 단추 만들때
+        name                        제어 이름
+        size                        크기 알려줌(text.password=글자개수)
+    -->
+    <!--
+    <textarea> 태그
+        : 두 줄 이상의 텍스트 입력 만들 때
+        속성                의미
+        rows                행의 수
+        cols                열의 수
+    <select> 태그
+        : 리스트 박스, 콤보 박스 만들 수 있음.
+        대표적인 속성 : multiple      Ctrl / Shift 키를 누른 상태에서 두 개 이상 메뉴를 동시선택 가능.
+    -->
+
+    <br/><br/><br/><br/>
+
+    <form action="#" method="get">
+        이름     : <input type = "text" name="username"/><br/>
+        아이디   : <input type = "text" name="uid"/><br/>
+        비밀번호 : <input type = "password" name ="upw"/><br/>
+        연락처 : <input type = "text" name="uphone1" size="5"/>
+                <input type = "text" name="uphone2" size="5"/>
+                <input type = "text" name="uphone3" size="5"/><br/>
+        사진 : <input type = "file" name="upic"/><br/>
+        성별 : <input type="radio" name="gender" value = "m" >남자
+            <input type="radio" name="gender" value = "w">여자 <br/>
+        사용언어 :  <input type="checkbox" name="lan" value="kor" checked="checked">한국어
+                    <input type="checkbox" name="lan" value="eng" >영어
+                    <input type="checkbox" name="lan" value="ger">독일어
+                    <input type="checkbox" name="lan" value="chi">중국어<br/>
+        자기소개 : <textarea rows = "5" cols ="30"></textarea>
+        국적      : <select >
+                        <option>KOREA</option>
+                        <option>CHINA</option>
+                        <option>JAPEN</option>
+                        <option>USA</option>
+                         <option>GERMANY</option>
+                    </select><br/>
+        좋아하는 음식 : <select multiple="multiple">
+                        <option>스파게티</option>
+                        <option>스시</option>
+                        <option>똥</option>
+                        <option>코딱지</option>
+                        <option>벌레</option>
+                    </select><br/>
+        <input type="submit">
+    </form>
+    <!--
+    레이아웃 구성 태그
+        DIV - 블록 단위
+    -->
+    <!--
+    HTML5 *시맨틱 태그
+    * 시맨틱 태그 : 태그 이름만 보면 명시적으로 어디에 쓰이고 있는 태그인지 알 수 있음
+                    <header>,<nav>,<section>,<article>,<aside>,<footer>
+    -->
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--
+        요구사항 :  이미지를 가로, 세로로 배열하기,
+                    버튼을 클릭하면 아래사항에 맞게 배열하기.
+                    1) 이미지 시작위치 - left 100, top 100
+                    2) 하나의 이미지 영역(이미지 크기와 ㅇ여백 포함 ) - 200 * 200
+                    ==> 이미지 위치값 구하는 것이 핵심
+                    3) 이미지를 3열로 배열
+    -->
+    <style>
+
+        div.image_container {
+            position : relative;
+        }
+        div.image_container img{
+            position : absolute;
+            left : 0;
+            top : 0;
+            width : 180px;
+            height : 150px;
+        }
+        #btnStart {
+            padding : 5px;
+            font: "맑은 고딕";
+            background : steelblue;
+            color: aliceblue;
+        }
+    </style>
+    <script src="libs/jquery-1.11.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btnStart").click(function(){
+                var $image = $("img");
+                var x;
+                var y=100;
+                for(var i=0; i< $image.length; i++) {
+                    x = 100+(i%3*200);
+                    if(i%3 ==0 && i!=0)
+                    {
+                        y+=200;
+                        x=100;
+                    }
+                    $image.eq(i).css({
+                        top : y,
+                        left : x
+                    })
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+
+    <div>
+        <button id = "btnStart">배열 시작</button>
+    </div>
+    <div class="image_container">
+        <img src="Banners/amazon.jpg"/>
+        <img src="Banners/apple.jpg"/>
+        <img src="Banners/Facebook.jpg"/>
+        <img src="Banners/google.jpg"/>
+        <img src="Banners/pinterest_260x166.jpg"/>
+        <img src="Banners/tesla.jpg"/>
+        <img src="Banners/xiaomi.jpg"/>
+        <img src="Banners/twitter.jpg"/>
+    </div>
+
+</body>
+</html>

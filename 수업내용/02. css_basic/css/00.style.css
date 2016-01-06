@@ -1,0 +1,24 @@
+h1 , p {
+    color : blue;
+    text-decoration: underline;
+}
+
+.menu1, .menu2, .menu5
+{
+    font-size : 20px
+}
+
+#wrap{
+    width : 500px;
+    background-color: aquamarine;
+    border : 1px solid #800880;
+
+    text-align : center;
+}
+
+#contents{
+    width : 350px;
+    background-color: darkorange;
+    border : 0.4px solid darkblue;
+
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery 사용법</title>
+    <style>
+        body {
+            font-size: 9pt;
+        }
+        #fish {
+            position: absolute;
+            left: 50px;
+            top: 120px;
+        }
+
+        #panel {
+            width:600px;
+            height :400px;
+            border: 1px solid #999;
+            position : relative;
+        }
+        #nav {
+            text-align:center;
+            width:600px;
+        }
+        #bar {
+            position :absolute;
+            left : 50px;
+            top:190px;
+            width: 500px;
+            height : 20px;
+            background : #F30;
+        }
+    </style>
+
+    <script src = "libs/jquery-1.11.3.min.js">
+        /*
+         // 1 먼저 jquery사용하려면 jQuery 기능이 들어있는 라이브러리 파일을 연결해야한다. (jquery-1.11.3.min.js같은)
+         // 2 ready()라는 메소드를 이용해서 초기 시작점을 정함.
+
+         */
+    </script>
+    <script>
+        $(document).ready(function(){
+            var $fish = $("#fish"); // fish id를 찾는다.
+             $("#btnstart").click(function(){
+                var x = parseInt($("#inputX").val());
+                var y = parseInt($("#inputY").val());
+
+                if( (x>=0 && x<=500) && (y>=0 && y<=290))
+                    $fish.css({
+                       left:x ,
+                        top:y
+                    });
+                 else
+                {
+                    alert("입력값이 너무 큽니다.");
+                    var x = parseInt($("#inputX").val(" "));
+                    var y = parseInt($("#inputY").val(" "));
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <img src="imagesY1VK1UYD.jpg" id = "fish">
+    </div>
+<div id = "nav">
+
+    <label>x값 입력</label>
+    <input id="inputX">
+    <label>y값 입력</label>
+    <input id="inputY">
+    <div id = "panel">
+        <button id = "btnstart">
+            물고기 움직이기
+        </button>
+    </div>
+</div>
+</body>
+</html>
