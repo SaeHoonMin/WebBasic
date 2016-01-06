@@ -1,0 +1,26 @@
+/*
+    힌트: CSS 규칙 적용(HTML 선택자)
+          각 속성 값은 캡쳐화면 참조해서 정함.
+                    p ==>   font-size,color,margin-left
+                    input ==> width, height, font-size, border,margin
+                    button ==> font-size
+
+*/
+div{
+    background-color: mistyrose;
+}
+p {
+    font-size : 13pt;
+    color : red;
+    margin-left: 15px;
+}
+input {
+    width: 120px;
+    height: 40px;
+    font-size: 20pt;
+    border: solid black 1px;
+    margin: 20px;
+}
+form button{
+    font-size : 20pt;
+}
