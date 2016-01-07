@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>함수의 정의 및 장점</title>
+    <script>
+        /*
+            요구사항에 대해 기능구현
+            1)코드 중복 제거 및 코드 재사용
+         */
+
+        function 함수이름(){
+            // statement
+        }
+        //JavaScript의 param은 type 쓰지않는다.
+        function showYear1(year,j)
+        {
+            for(var i=1;i<=j;i++)
+            {
+                document.write(i +". "+year+"입니다<br>");
+            }
+        }
+
+
+        function gugu() {
+            for(var i=2;i<=9;i++)
+            {
+                for(var j=1;j<=9;j++)
+                    document.write(i + " * " + j + " = "+(j*i) +"<br>");
+                document.write("<br>");
+            }
+        }
+
+        gugu();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

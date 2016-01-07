@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>전역변수/지역변수</title>
+    <!--
+        변수 종류(4가지)
+            1)전역변수
+            2)지역변수 : 주로 함수 내부에 있음
+            3)매개변수(파라미터) : 함수 외부에서 내부로 데이터 전달 용도로 만듬
+            4)멤버변수(프로퍼티) : 클래스 내부에 만듬. 객체 정보 담음.
+    -->
+    <script>
+        var name = "dojun1"
+
+        function func1() {
+            var name = "dujun2";
+            document.write(name);
+        }
+        document.write("1. name = "+name+"<br>");
+        func1();
+
+
+
+
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

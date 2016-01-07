@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="libs/jquery-1.11.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var input;
+            var sum = 0;
+            var d =0;
+            while(true)
+            {
+                input = window.prompt((d+1)+"번째 값 입력 : ");
+                if(input=='q' || input=='Q')
+                {
+                    break;
+                }
+                else if(input !=NaN)
+                {
+                    d++;
+                    input = parseInt(input);
+                    sum+=input;
+                    $("#haha").text("입력된 값의 합 : "+sum);
+                }
+                else
+                    alert("잘못된 입력이다.");
+            }
+        })
+
+
+
+    </script>
+
+</head>
+<body>
+    <p id = "haha"></p>
+</body>
+</html>

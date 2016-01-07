@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--
+     1)주사위 던져서 3이나올때까지 console.log
+    -->
+    <script src="libs/jquery-1.11.3.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#btnStart1").click(function(){
+
+            var count =0;
+            var a =  parseInt(Math.random() * 6) +1;
+            while(true)
+            {
+                if(a!=3)
+                {
+                    count++;
+                    console.log(a);
+                    a = parseInt(Math.random() * 6) +1;;
+                }
+                else
+                {
+                    console.log("탈출! 값 : "+a);
+                    console.log(count + "번째 만에 탈출.");
+                    break;
+                }
+            }
+
+        });
+    });
+    </script>
+</head>
+<body>
+    <button id = "btnStart1">주사위 던지기</button>
+</body>
+</html>
