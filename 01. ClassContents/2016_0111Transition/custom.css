@@ -1,0 +1,15 @@
+/*
+    transition : 속성명, 전환시간, 가속도 설정(ease, linear), 지연시간
+                *가상선택자 :hover를 이용하여 머우스오버 시 전환 효과 설정함.
+*/
+.hover {
+    width : 400px;
+    height : 400px;
+    background-color:  orange;
+    margin : 100px auto;
+    transition : all 0.5s ease 0s;
+}
+
+.hover:hover {
+    transform : rotate(25deg); background : blue;
+}

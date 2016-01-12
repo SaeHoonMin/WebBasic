@@ -1,0 +1,32 @@
+/*
+    Reset CSS
+*/
+* { margin : 0px; padding : 0px;}
+
+/*
+    Box-Sizing : CSS3에 포함된 새로운 기능임.
+                 padding 과 border 의 값을 특정요소의 넓이값과 높이값에 포함시키는 방법
+                 box-sizing : border-box
+                              ----------> 해당 속성 추가시 padding값과 border의 굵기가
+                                          자동으로 기존 요소의 넓이와 높이값으로 포함
+                                          일일이 padding과 border의 수치를 조절할 필요 없음
+*/
+
+div {
+    width : 300px ; height : 300px ;
+    background-color : lightblue;
+    float : left;
+    margin : 50px;
+    font-size : 60px;
+}
+
+div:nth-of-type(2) {
+    padding : 50px;
+    border:20px solid #666;
+}
+div:nth-of-type(3) {
+    padding : 50px;
+    border:20px solid #666;
+    box-sizing : border-box;
+}
+

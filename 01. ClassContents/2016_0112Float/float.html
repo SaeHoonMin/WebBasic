@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel = "stylesheet" href = "custom.css">
+    <!-- CSS Float
+        엘리먼트를 왼쪽 혹은 오른쪽부터 배치
+        1) 전체 레이아웃을 잡을 때 float 사용함.
+            - table 을 div의 float 속성으로 만들 수 있다
+        2) 이미지 갤러리
+            - float되고있는 것을 중지할때 => clear 속성을 사용
+        3) 수평적인 메뉴 만들 때 사용함
+            - 메뉴를 옆(horizontal)으로 배치할 때
+    -->
+</head>
+<body>
+    <p> <b>
+            Float 속성 : 가로형 메뉴 구현시 많이 사용하는 속성임.<br>
+            아래 문단에서 <em>float:right</em> 스타일을 적용한 이미지를 추가한다.<br>
+            이 이미지는 문단의 오른쪽에 float 한다?</b>   </p>
+
+    <p> <img src = "css3.jpg" width="70px" height="70px"> Cascading Style Sheets (CSS) is
+        a style sheet language used for describing
+        the presentation of a document written in a markup language.  </p>
+
+    <br>
+    <h3>이미지 갤러리</h3>
+    <img class = "thumbnail" src="css3.jpg">
+    <img class = "thumbnail" src="css3.jpg">
+    <img class = "thumbnail" src="css3.jpg">
+    <img class = "thumbnail" src="css3.jpg">
+    <img class = "thumbnail" src="css3.jpg">
+    <img class = "thumbnail" src="css3.jpg">
+    <img class = "thumbnail" src="css3.jpg">
+    <img class = "thumbnail" src="css3.jpg">
+    <img class = "thumbnail" src="css3.jpg">
+    <img class = "thumbnail" src="css3.jpg">
+    <img class = "thumbnail" src="css3.jpg">
+    <br>
+    <!--
+        다음과 같은 경유 thumbnail 클래스가 float:left로 되어있는데
+        이를 풀어줘야 함. -> clear 속성
+    -->
+
+    <h3 class = "second_row">두 번째 행</h3>
+    <img class = "second_row" src="css3.jpg">
+    <img class = "second_row" src="css3.jpg">
+    <img class = "second_row" src="css3.jpg">
+    <img class = "second_row" src="css3.jpg">
+    <img class = "second_row" src="css3.jpg">
+    <img class = "second_row" src="css3.jpg">
+    <img class = "second_row" src="css3.jpg">
+
+    <h3 class="thrid_row"><br><br>메뉴</h3>
+    <ul >
+        <li><a href = "#home">Home</a></li>
+        <li><a href = "#home">News</a></li>
+        <li><a href = "#home">Contract</a></li>
+        <li><a href = "#home">About</a></li>
+    </ul>
+</body>
+</html>

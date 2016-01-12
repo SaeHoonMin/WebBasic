@@ -1,0 +1,66 @@
+
+/* reset CSS */
+* { padding : 0px; margin : 0px}
+
+
+
+.other {
+    border: 2px dashed lightskyblue;
+    padding:5px;
+    /* static : Default 값으로, 속성 값이 미설정 */
+    position : static;
+    /* position 이 static 이라 아래 값들은 반영되지 않는다. */
+    top : 10px;
+    left : 50px;
+}
+
+/* 재정의 -> 위치 바뀜*/
+/*
+.other{
+    position : fixed;
+}
+*/
+
+.parent { border : 3px solid mediumpurple ; margin : 5px;}
+
+
+.child {
+    /* fixed로 하면 부모 위치 안에서 벗어날수있다.
+       스크롤할때도 위치 고정.
+       독자적으로 위치함.
+       */
+    position : fixed;
+    top : 200px;
+    left : 50px;
+    background-color : teal ;
+    color : white
+}
+
+.child {
+    /*
+        relative - 부모 앨리먼트 기준으로위치함.
+        static 처럼 부모앨리먼트 영역을 물려받는다
+    */
+    position : relative
+}
+
+.child {
+    /*
+       absolute - 부모 앨리먼트 무시하고 문서전체 기준으로 특정 위치에 위치함
+                  fixed 와의 차이 : 스크롤할때 다른 앨리먼트와 함께 따라 올라가거나 내려가거나함.
+    */
+    position : absolute;
+    top : 300px;
+    left : 50px;
+}
+
+.theOther {
+    background-color: darkorange
+}
+
+.pos_fixed {
+    position : fixed;
+    top : 15px;
+    left : 50px;
+}
+
