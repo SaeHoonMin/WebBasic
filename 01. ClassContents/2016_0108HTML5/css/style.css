@@ -60,3 +60,7 @@ article h2:hover{
 article strong img {
     height : 300px; width : auto;
 }
+
+/* copyright */
+.copyright { position : fixed; bottom  : 20px ; right: 30px; font-size : 12px; font-family: arial;
+    letter-spacing:4px; color : #999; text-align:center}
